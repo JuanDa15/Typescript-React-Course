@@ -7,7 +7,6 @@ interface Props extends ImgHTMLAttributes<HTMLImageElement> {
   onLazyLoad?: (node: HTMLImageElement) => void;
 }
 
-
 export const LazyImage = ({ src, onLazyLoad, ...others }: Props): JSX.Element => {
   const placeHolder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4='
 

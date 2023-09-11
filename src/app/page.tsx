@@ -5,18 +5,13 @@ import type { MouseEventHandler } from 'react';
 // Generate a random funciton between 1 an 123
 const getRandomNumber = (): number => Math.floor(Math.random() * 123) + 1;
 
-interface Image {
-  id: string;
-  url: string;
-}
-
 export default function Home() {
-  const [images, setImages] = useState<Image[]>([]);
+  const [images, setImages] = useState<IFoxImage[]>([]);
 
   const addNewFox: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.preventDefault();
 
-    const newImage: Image = {
+    const newImage: IFoxImage = {
       id: crypto.randomUUID(),
       url: `https://randomfox.ca/images/${getRandomNumber()}.jpg`,
     };
